@@ -119,3 +119,7 @@
   color: var(--little-text-color);
   padding-left: 24px;
 }
+.buttons-main:focus-within {
+  background: var(--main-color);
+  color: var(--text-link-color);
+}

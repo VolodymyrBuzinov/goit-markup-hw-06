@@ -898,6 +898,7 @@
   transform: translate(-30px, -40px);
   color: var(--main-color);
 }
+
 .input-icon {
   position: absolute;
   width: 18px;

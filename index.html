@@ -61,7 +61,9 @@
         <h1 class="header-title">
           Эффективные решения <br />для вашего бизнеса
         </h1>
-        <a href="#" class="header-title-button">Заказать услугу</a>
+        <button data-modal-open class="header-title-button">
+          Заказать услугу
+        </button>
       </div>
     </header>
     <!-- END HEADER -->
@@ -422,22 +424,107 @@
                 <input
                   class="footer-input"
                   type="email"
+                  name="email"
                   id="email"
                   placeholder="E-mail"
                 />
               </div>
-              <a class="submmit" href="#">Подписаться </a>
+              <button class="submmit">Подписаться</button>
             </div>
           </form>
           <!-- </div> -->
         </div>
-        <div class="footer-line">
-          <p class="footer-copyright">
-            2020 | Developed by GoIT Students
-          </p>
-        </div>
       </div>
     </footer>
     <!-- END FOOTER -->
+    <!-- MODAL WINDOW -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <form class="modal-form" action="/">
+          <button class="close-button" data-modal-close></button>
+          <p class="modal-desc">Оставьте свои данные, мы вам перезвоним</p>
+          <ul class="modal-list">
+            <li>
+              <label class="modal-label">
+                <input
+                  class="modal-input"
+                  type="text"
+                  name="name"
+                  placeholder=" "
+                />
+                <span class="input-desc">Имя</span>
+                <svg class="input-icon">
+                  <use
+                    href="./img/icons-optimized/symbol-defs.svg#icon-person-black-18dp-1"
+                  ></use>
+                </svg>
+              </label>
+            </li>
+            <li>
+              <label class="modal-label">
+                <input
+                  class="modal-input"
+                  type="text"
+                  name="mobile"
+                  placeholder=" "
+                />
+                <span class="input-desc">Телефон</span>
+                <svg class="input-icon">
+                  <use
+                    href="./img/icons-optimized/symbol-defs.svg#icon-phone-black-18dp-1"
+                  ></use>
+                </svg>
+              </label>
+            </li>
+            <li>
+              <label class="modal-label">
+                <input
+                  class="modal-input"
+                  type="text"
+                  name="email"
+                  placeholder=" "
+                />
+                <span class="input-desc">Почта</span>
+                <svg class="input-icon">
+                  <use
+                    href="./img/icons-optimized/symbol-defs.svg#icon-email-black-18dp-1"
+                  ></use>
+                </svg>
+              </label>
+            </li>
+          </ul>
+          <div class="textarea-container">
+            <textarea
+              class="modal-textarea"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder=" "
+            ></textarea>
+            <label class="textarea-label" for="comment">Комментарий</label>
+          </div>
+          <div class="agree-container">
+            <label class="agree-label"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="#">Условия договора</a>
+              <input
+                class="agree-checkbox is-hidden"
+                name="agreements"
+                type="checkbox"
+                value="agreements" />
+              <svg class="checkbox-icon">
+                <use
+                  href="./img/icons-optimized/symbol-defs.svg#icon-icon-check"
+                ></use></svg
+            ></label>
+          </div>
+          <div class="button-container">
+            <button class="send-button">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
   </body>
 </html>

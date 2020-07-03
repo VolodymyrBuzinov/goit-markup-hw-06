@@ -891,14 +891,23 @@
   letter-spacing: 0.01em;
   color: #757575;
   transform: translateY(-50%);
-  transition: transform var(--animation-duration);
 }
 .modal-input:focus ~ .input-desc,
 .modal-input:not(:placeholder-shown) ~ .input-desc {
-  transform: translate(-30px, -40px);
+  animation: drop var(--animation-duration) forwards;
   color: var(--main-color);
 }
-
+@keyframes drop {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translate(-30px, -40px);
+  }
+}
 .input-icon {
   position: absolute;
   width: 18px;
@@ -945,11 +954,23 @@
   top: 0;
   left: 18px;
   transform: translatey(12px);
-  transition: var(--animation-duration);
+  transition: transform var(--animation-duration);
 }
 .modal-textarea:focus + .textarea-label,
 .modal-textarea:not(:placeholder-shown) + .textarea-label {
-  transform: translate(-12px, -20px);
+  animation: drop-2 var(--animation-duration) forwards;
+  color: var(--main-color);
+}
+@keyframes drop-2 {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translate(-15px, -20px);
+  }
 }
 .agree-container {
   width: 100%;

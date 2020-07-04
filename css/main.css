@@ -625,7 +625,7 @@
 }
 .footer-social p {
   margin-top: 0;
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
   font-style: normal;
   font-weight: bold;
@@ -719,7 +719,7 @@
 }
 .footer-form p {
   margin-top: 0;
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
   font-style: normal;
   font-weight: bold;
@@ -827,16 +827,21 @@
 }
 .close-button {
   position: absolute;
+  display: flex;
+  align-items: center;
+  outline: none;
   top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
   background: #ffffff;
-  background-image: url("../img/modal-form/close-img.svg");
-  background-position: center;
-  background-repeat: no-repeat;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
+  transition: var(--animation-duration);
+}
+.close-button:hover svg {
+  transition: var(--animation-duration);
+  fill: var(--main-color);
 }
 .modal-desc {
   margin-top: 0;
